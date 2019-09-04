@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/TextAppearance.Compat.Notification.Title"
+    android:padding="2dp">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/close"
+        android:src="@drawable/close"
+        android:id="@+id/close"
+        style="@style/TextAppearance.Compat.Notification.Title" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/song_name"
+        android:layout_below="@id/close"
+        android:textColor="#000"
+        android:text="Song name"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+
+        style="@style/TextAppearance.Compat.Notification.Title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_name"
+        android:gravity="center"
+        style="@style/TextAppearance.Compat.Notification.Title" >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/previous"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/previous"
+                style="@style/TextAppearance.Compat.Notification.Title" />
+
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toEndOf="@id/previous"
+                android:src="@drawable/stop"
+                android:id="@+id/stop"
+                android:layout_marginRight="20dp"
+                style="@style/TextAppearance.Compat.Notification.Title" />
+
+
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toEndOf="@id/stop"
+                android:src="@drawable/next"
+                android:id="@+id/next"
+                style="@style/TextAppearance.Compat.Notification.Title" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
